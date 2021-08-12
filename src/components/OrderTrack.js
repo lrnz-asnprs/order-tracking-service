@@ -12,7 +12,7 @@ export default function OrderTrack() {
     console.log("hello")
     console.log(orderId)
     console.log(email)
-    const response = await fetch(`http://order-experience-api.us-e2.cloudhub.io/api/orders/${orderId}/status?email=${email}`);
+    const response = await fetch(`http://bpw-webshop-eapi.us-e2.cloudhub.io/api/getOrderStatus?orderId=${orderId}&email=${email}`);
     const orderItem = await response.json();
     console.log(orderItem)
     setOrder(orderItem);
@@ -30,7 +30,7 @@ export default function OrderTrack() {
   return (
 
     <div className="Order">
-
+      <div className="Info">
       <Form onSubmit={handleSubmit}>
           <Form.Label>E-Mail    </Form.Label>
           <input type="email" className="inputField" class="form-control form-control-lg" id="exampleFormControlInput1" placeholder="name@example.com" value={email} onChange={(e) => setEmail(e.target.value)}></input>
@@ -40,15 +40,19 @@ export default function OrderTrack() {
           Track Order
         </button>
         <h3>Your order status</h3>
-        <p>Order ID: {order.orderId}</p>
-        <p>Status: {order.status}</p>
-        <p>Size: {order.size}</p>
-        <p>Comment: {order.comment}</p>
-        <p>Price: {order.price}</p>
-        <p>Description: {order.description}</p>
-
-        {/* <OrderItem/> */}
+        <div className="Product">
+          <p>Order-ID: {order.orderId}</p>
+          <p>Size: {order.orderedSize}</p>
+          <p>Status: {order.orderStatus}</p>
+          <p>Name: {order.ordererName}</p>
+          <p>Adress: {order.orderShipToFull}</p>
+          <p>Email: {order.ordererEmail}</p>
+          <p>Ordered product: {order.orderedProduct}</p>
+          <p>Quantity: {order.quatity}</p>
+          <p>Price per unit {order.priceperunit}</p>
+        </div>
       </Form>
+      </div>
     </div>
   );
 }

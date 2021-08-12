@@ -2,9 +2,14 @@
     
     .Order {
       padding: 20px 0;
-      position: fixed;
-      top: 20%;
-      left: 21%;
+      position:sticky;
+    }
+    .Info {
+        margin-left: 60px;
+    }
+    .Product {
+        color:black;
+        overflow:auto;
     }
 
     #email {
@@ -20,7 +25,7 @@
 
     .MainButton {
         margin-top: 20px;
-        background-color:#ff6900;
+        background-color:blueviolet;
         color: white;
         font-size:large;
         transition:all 0.2s;
