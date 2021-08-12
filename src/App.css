@@ -1,0 +1,21 @@
+
+.topbar {
+  color:#282c34;
+  background-color:lightgrey;
+  height: 60px;
+}
+
+.bottombar {
+  color:#282c34;
+  background-color:lightgrey;
+  position: fixed;
+    bottom: 0;
+    width: 100%;
+  height: 60px;
+}
+
+h1 {
+  color: #007e80;
+  position:fixed;
+  left: 20%;
+}
