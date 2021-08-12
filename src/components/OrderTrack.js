@@ -48,7 +48,7 @@ export default function OrderTrack() {
           <p>Adress: {order.orderShipToFull}</p>
           <p>Email: {order.ordererEmail}</p>
           <p>Ordered product: {order.orderedProduct}</p>
-          <p>Quantity: {order.quatity}</p>
+          <p>Quantity: {order.quantity}</p>
           <p>Price per unit {order.priceperunit}</p>
         </div>
       </Form>
