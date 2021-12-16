@@ -1,6 +1,6 @@
 # Overview
 
-Simple React application created to show order status of an order item exposd by a Mule REST-API. 
+Simple React application to show the order status of an order item listed in Salesforce CRM. Data is exposed by a Mule REST-API. 
 
 ## `npm start`
 
